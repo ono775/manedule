@@ -1,24 +1,76 @@
-# README
+# アプリ名
+### Manedule(マネジュール)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 概要
+- 撮影技術会社のスケジュール管理と、機材の在庫管理を行うことが出来ます
+- スケジュールの新規作成や編集は基本的に１名のログインユーザーのみで、その他の人は閲覧のみ出来ます
 
-Things you may want to cover:
+# 制作背景(意図)
+現職はテレビなどの撮影技術を行っています。  
+現在の職場で起こる問題として、機材の割り振りが出来ておらず使用当日に必要な機材が無かった、ということが多々ありました。  
+一番の理由は個人の確認不足ですが、日々の仕事に追われて間違えてしまったり、出張などで会社に
+行くことが出来ないことも問題だと思います。  
+アナログである、現場に出ていると確認出来ない、確認したい時に会社に人がいないなどを解決し、いつでも確認できるアプリケーションがあるとミスも減るのでは無いかと思い作成しようと思いました。
 
-* Ruby version
+# DEMO
 
-* System dependencies
+# 実装予定の内容
+- ### ユーザー管理機能  
+      新規登録
+      ログイン
+- ### スケジュール管理機能  
+      新規作成
+      編集、削除
+- ### 在庫管理機能  
+      機材の状態(修理中など)
+      予約状況
+- ### 通知機能
+      管理者(ログインユーザー)が人員の変更など行うとポップアップなどで表示
 
-* Configuration
+# DB設計
+## usersテーブル
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| name               | string | null: false               |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
 
-* Database creation
+### Association
+- has_many :schedules
+- has_many :objects
 
-* Database initialization
+## schedulesテーブル
+| Column       | Type       | Options                         |
+| ------------ | ---------- | ------------------------------ |
+| loation_date | date       | null: false                    |
+| client       | string     | null: false                    |
+| title        | string     | null: false                    |
+| content      | text       | null: false                    |
+| user         | references | null: false, foreign_key: true |
 
-* How to run the test suite
+### Association
+- belongs_to :user
+- has_many :objects
+- has_many :members
 
-* Services (job queues, cache servers, search engines, etc.)
+## objectsテーブル
+| Column    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| name_id   | integer    | null: false                    |
+| status_id | integer    | null: false                    |
+| user      | references | null: false, foreign_key: true |
+| schedule  | references | null: false, foreign_key: true |
 
-* Deployment instructions
+### Association
+- belongs_to :user
+- belongs_to :schedule
 
-* ...
+## membersテーブル
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| name_id     | integer    | null: false                    |
+| position_id | integer    | null: false                    |
+| schedule    | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :schedule
