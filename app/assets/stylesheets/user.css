@@ -1,0 +1,105 @@
+body {
+  padding-left: 30%;
+  padding-right: 30%;
+  padding-top: 5%;
+}
+
+h2, h5 {
+  padding-left: 10%;
+}
+
+.form-wrap {
+  /* form入力 */
+  display: flex;
+  justify-content: center;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.form-delete {
+  display: flex;
+  justify-content: center;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #d31919;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.actions {
+  /* submitエリア */
+  padding-top: 20px;
+}
+
+.links {
+  /* 下部のbackボタンエリア */
+  display: flex;
+  justify-content:flex-start ;
+  padding-left: 10%;
+  text-decoration: none;
+}
+
+.btn-1 {
+  /* submitボタン */
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #0e222e;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.btn-1:hover {
+  /* submitボタンの効果 */
+  background: #67c5ff;
+  color: white;
+}
+
+.button_to input {
+  /* deleteボタン */
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #0e222e;
+  border: solid 2px #ff8f8f;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.button_to input:hover {
+  /* deleteボタンの効果 */
+  background: #ff8f8f;
+  color: white;
+}
+
+/* btn-2 backボタン,  btn-3 login等のボタン */
+.btn-2, .btn-3 {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+}
+
+.btn-2:active, .btn-3:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+
+.btn-2, .btn-3 {
+  margin-left: 15px;
+}
+
+.error-message, .flash {
+  list-style-type: none;
+  color: #d31919;
+}
