@@ -1,0 +1,46 @@
+<h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+<div class="form-wrap">
+  <%= form_with model: @user, url: "/users", local: true do |f| %>
+    <%= render "devise/shared/error_messages", model: f.object %>
+
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :new_password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %>文字以上)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :current_password %><br />
+      <%= f.password_field :current_password, autocomplete: "current-password" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Update", class: "btn-1" %>
+    </div>
+  <% end %>
+</div>
+
+<h5>アカウント削除</h5>
+
+<div class="form-delete">
+  <p>削除しますか？<%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "本当に削除しますか?" }, method: :delete %></p>
+</div>
+
+<%= link_to "Back", root_path, class: "btn-2" %>
