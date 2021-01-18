@@ -4,6 +4,7 @@ ja:
       user:
         name: '名前'
         password: 'パスワード'
+        new_password: '新しいパスワード'
         password_confirmation: 'パスワード確認'
         current_password: '現在のパスワード'
         email: 'Eメール'
@@ -15,7 +16,7 @@ ja:
     failure:
       already_authenticated: 'すでにログインしています。'
       inactive: 'アカウントが有効化されていません。メールに記載された手順にしたがって、アカウントを有効化してください。'
-      invalid: "%{authentication_keys} もしくはパスワードが不正です。"
+      invalid: "%{authentication_keys} もしくはパスワードが不正です"
       locked: 'あなたのアカウントは凍結されています。'
       last_attempt: 'あなたのアカウントが凍結される前に、複数回の操作がおこなわれています。'
       not_found_in_database: "%{authentication_keys} もしくはパスワードが不正です。"
@@ -47,8 +48,8 @@ ja:
       update_needs_confirmation: 'アカウント情報を変更しました。変更されたメールアドレスの本人確認のため、本人確認用メールより確認処理をおこなってください。'
       updated: 'アカウント情報を変更しました。'
     sessions:
-      signed_in: 'ログインしました。'
-      signed_out: 'ログアウトしました。'
+      signed_in: 'ログインしました'
+      signed_out: 'ログアウトしました'
       already_signed_out: '既にログアウト済みです。'
     unlocks:
       send_instructions: 'アカウントの凍結解除方法を数分以内にメールでご連絡します。'
