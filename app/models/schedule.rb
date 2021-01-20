@@ -1,10 +1,10 @@
 class Schedule < ApplicationRecord
   belongs_to :user
-  has_manny :objects
-  has_manny :members
+  has_many :objects
+  has_many :members
 
   with_options presence: true do
-    validates :location_date
+    validates :start_time
     validates :client
     validates :title
     validates :content
