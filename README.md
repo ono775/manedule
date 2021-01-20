@@ -40,13 +40,13 @@
 - has_many :objects
 
 ## schedulesテーブル
-| Column       | Type       | Options                         |
-| ------------ | ---------- | ------------------------------ |
-| loation_date | date       | null: false                    |
-| client       | string     | null: false                    |
-| title        | string     | null: false                    |
-| content      | text       | null: false                    |
-| user         | references | null: false, foreign_key: true |
+| Column        | Type       | Options                         |
+| ------------  | ---------- | ------------------------------ |
+| location_date | date       | null: false                    |
+| client        | string     | null: false                    |
+| title         | string     | null: false                    |
+| content       | text       | null: false                    |
+| user          | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
