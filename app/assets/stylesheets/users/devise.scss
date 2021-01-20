@@ -1,4 +1,5 @@
 .wrap {
+  /* ページ全体 */
   padding-left: 30%;
   padding-right: 30%;
   padding-top: 5%;
@@ -22,6 +23,7 @@
 }
 
 .form-delete {
+  /* 登録削除のエリア */
   display: flex;
   justify-content: center;
   padding: 0.5em 1em;
