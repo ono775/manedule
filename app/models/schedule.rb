@@ -4,7 +4,8 @@ class Schedule < ApplicationRecord
   has_many :members
 
   with_options presence: true do
-    validates :start_time
+    validates :start_date
+    validates :end_date
     validates :client
     validates :title
     validates :content
