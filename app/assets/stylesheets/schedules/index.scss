@@ -1,0 +1,85 @@
+.simple-calendar {
+  // カレンダーエリア全体
+  padding: 20px 10vw;
+}
+
+.calendar-heading {
+  // 年月表示エリア
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.calendar-title {
+  // 年月部分
+  font-size: 20px;
+}
+
+.calendar-select {
+  // 月選択部分
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0 10px;
+  text-decoration: none;
+  color: #67c5ff;
+  font-size: 20px;
+}
+
+.calendar-select:hover {
+  // 月選択の効果
+  text-decoration: none;
+}
+
+.table {
+  // カレンダー全体
+  height: 80vh;
+}
+
+tbody {
+  // カレンダー日付部分の全体
+  background-color: rgb(253, 255, 255);
+}
+
+.schedules-list {
+  color: #130f0b;
+  border-left: solid 6px #f19950;/*左側の線*/
+  background: #fae4d3;/*背景色*/
+  margin-bottom: 3px;/*下のバーとの余白*/
+   line-height: 1.5;
+  padding: 0.5em;
+  list-style-type: none!important;/*ポチ消す*/
+  font-size: xx-small;
+}
+
+.schedule-title {
+  font-size: x-small;
+  color: #130f0b;
+}
+
+.schedule-title:hover {
+  color: #f19950;
+  text-decoration: none;
+}
+
+// .day {}
+
+// .wday-0 {}
+// .wday-1 {}
+// .wday-2 {}
+// .wday-3 {}
+// .wday-4 {}
+// .wday-5 {}
+// .wday-6 {}
+
+// .today {}
+// .past {}
+// .future {}
+
+// .start-date {}
+
+// .prev-month {}
+// .next-month { }
+// .current-month {}
+
+// .has-events {}
