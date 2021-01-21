@@ -1,6 +1,6 @@
 class SchedulesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
-  
+
   def index
     @schedules = Schedule.all
   end
