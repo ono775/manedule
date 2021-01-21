@@ -1,0 +1,45 @@
+.nav {
+  // ヘッドバー全体
+  padding: 0.5em 1em;
+  color: #5d627b;
+  background: white;
+  border-bottom: solid 5px #b7e0fa;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.top-btn {
+  // 左側ボタンのグループ
+  display: inline-block;
+  padding: 0.6em 1em;
+  text-decoration: none;
+  color: #108ddb;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+  font-size: 16px;
+}
+
+.top-btn:hover {
+  // 左側ボタンの効果
+  background: #67c5ff;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link {
+  // 右側ボタン
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #108ddb;
+  border: double 4px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+  margin-left: 5px;
+}
+
+.nav-link:hover {
+  // ボタンの効果
+  background: #fffbef;
+}

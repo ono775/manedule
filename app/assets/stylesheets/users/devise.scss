@@ -8,6 +8,7 @@
 .h1 {
   /* 見出し部分 */
   padding-left: 10%;
+  color: #1f648b;
 }
 
 .form-wrap {
@@ -52,16 +53,18 @@
   display: inline-block;
   padding: 0.3em 1em;
   text-decoration: none;
-  color: #0e222e;
+  color: #67c5ff;
   border: solid 2px #67c5ff;
   border-radius: 3px;
   transition: .4s;
+  background-color: white;
 }
 
 .btn-1:hover {
   /* submitボタンの効果 */
   background: #67c5ff;
   color: white;
+  text-decoration: none;
 }
 
 .button_to input {
@@ -69,7 +72,7 @@
   display: inline-block;
   padding: 0.3em 1em;
   text-decoration: none;
-  color: #0e222e;
+  color: #ff8f8f;
   border: solid 2px #ff8f8f;
   border-radius: 3px;
   transition: .4s;
@@ -85,17 +88,16 @@
 .btn-2, .btn-3 {
   display: inline-block;
   padding: 0.5em 1em;
-  background: #668ad8;/*ボタン色*/
-  color: #FFF;
-  border-bottom: solid 4px #627295;
+  text-decoration: none;
+  color: #67c5ff;
+  border: double 4px #67c5ff;
   border-radius: 3px;
+  transition: .4s;
 }
 
-.btn-2:active, .btn-3:active {
-  /*ボタンを押したとき*/
-  -webkit-transform: translateY(4px);
-  transform: translateY(4px);/*下に動く*/
-  border-bottom: none;/*線を消す*/
+.btn-2:hover, .btn-3:hover {
+  background: #fffbef;
+  text-decoration: none;
 }
 
 .btn-2, .btn-3 {
