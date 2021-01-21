@@ -1,0 +1,18 @@
+<ul class="nav">
+  <div class="nav-start">
+    <%= link_to '機材list', "#", class: "top-btn" %>
+    <%= link_to 'スタッフlist', "#", class: "top-btn" %>
+  </div>
+
+  <div class="nav-end">
+    <%= link_to 'home', "#", class: "nav-link active" %>
+    <% if user_signed_in? %>
+      <%= link_to current_user.name, edit_user_registration_path, class: "nav-link active" %>
+      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "nav-link active" %>
+    <% else %>
+      <%= link_to 'ログイン', new_user_session_path, class: "nav-link active" %>
+      <%= link_to '新規登録', new_user_registration_path, class: "nav-link active" %>
+    <% end %>
+    <%= link_to 'スケジュール作成', new_schedule_path, class: "nav-link active" %>
+  </div>
+</ul>

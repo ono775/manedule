@@ -8,6 +8,12 @@ ja:
         password_confirmation: 'パスワード確認'
         current_password: '現在のパスワード'
         email: 'Eメール'
+      schedule:
+        start_date: '撮影開始日'
+        end_date: '撮影終了日'
+        client: '発注会社'
+        title: '番組名'
+        content: '内容'
   devise:
     confirmations:
       confirmed: 'アカウントを登録しました。'

@@ -1,2 +1,5 @@
 @import "bootstrap/scss/bootstrap";
-@import "user.css";
+@import "/header";
+@import "simple_calendar";
+@import "/schedules/index";
+@import "/users/devise";
