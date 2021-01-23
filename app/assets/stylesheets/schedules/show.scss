@@ -1,0 +1,57 @@
+.day-table-area {
+  // 詳細内容を含めたエリア
+  display: flex;
+  justify-content: center;
+  margin: 70px 0 40px 0;
+
+}
+
+th, td {
+  // テーブルの各ブロック
+  border: solid 1px #dddddd;
+  padding-left: 20px;
+}
+
+.th-size {
+  // 左側の各ブロック
+  width: 150px;
+  height: 70px;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  background: #fff6ef;
+  border-left: solid 6px #f19950;
+}
+
+.td-size {
+  // 右側の各ブロック
+  width: 600px;
+  height: 70px;
+}
+
+.td-size-content {
+  // 内容部分のみのブロック
+  white-space: pre-line;
+}
+
+.edit-link-area {
+  // 編集ボタンを含めたエリア
+  display: flex;
+  justify-content: center;
+}
+
+.edit-link {
+  // 編集ボタン
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: #108ddb;
+  border: double 4px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+  margin-left: 5px;
+}
+
+.edit-link:hover {
+  // 編集ボタンの効果
+  background: #fffbef;
+  text-decoration: none;
+}
