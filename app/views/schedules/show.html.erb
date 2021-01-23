@@ -1,0 +1,40 @@
+<%= render 'shared/header' %>
+
+<table class="day-table-area">
+  <tbody class="day-table">
+    <tr>
+      <th class="th-size">日付</th>
+      <td class="td-size">
+        <%= @schedule.start_date.month %>月 <%= @schedule.start_date.day %>日 
+        <% if @schedule.end_date != @schedule.start_date %>
+          ~ <%= @schedule.end_date.month %>月 <%= @schedule.end_date.day %>日
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <th class="th-size">会社名</th>
+      <td class="td-size">
+        <%= @schedule.client %>
+      </td>
+    </tr>
+    <tr>
+      <th class="th-size">title</th>
+      <td class="td-size">
+        <%= @schedule.title %>
+      </td>
+    </tr>
+    <tr>
+      <th class="th-size">内容</th>
+      <td class="td-size-content">
+        <%= @schedule.content %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="edit-link-area">
+  <% if user_signed_in? %>
+    <%= link_to "編集", "#", class: "edit-link" %>
+  <% end %>
+</div>
+
