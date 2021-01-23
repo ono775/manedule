@@ -1,5 +1,5 @@
 class SchedulesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :edit]
 
   def index
     @schedules = Schedule.all
@@ -16,6 +16,13 @@ class SchedulesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @schedule = Schedule.find(params[:id])
+  end
+
+  def edit
   end
 
   private
