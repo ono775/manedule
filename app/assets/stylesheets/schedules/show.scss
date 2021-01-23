@@ -55,3 +55,21 @@ th, td {
   background: #fffbef;
   text-decoration: none;
 }
+
+.destory-link {
+  // 削除ボタン
+  display: inline-block;
+  padding: 0.5em 3em;
+  color: #fd4a4a;
+  border: double 4px #ff7878;
+  border-radius: 3px;
+  transition: .4s;
+  margin-left: 20px;
+}
+
+.destory-link:hover {
+  // 削除ボタンの効果
+  color: #fa1717;
+  background: #ffe8e8;
+  text-decoration: none;
+}
