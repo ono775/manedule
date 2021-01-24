@@ -35,6 +35,7 @@
 <div class="edit-link-area">
   <% if user_signed_in? %>
     <%= link_to "編集", edit_schedule_path, class: "edit-link" %>
+    <%= link_to "削除", schedule_path(@schedule.id), method: :delete, data: { confirm: "本当に削除しますか?" }, class: "destory-link" %>
   <% end %>
 </div>
 
