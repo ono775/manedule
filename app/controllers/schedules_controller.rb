@@ -13,7 +13,7 @@ class SchedulesController < ApplicationController
   def create
     @schedule = Schedule.new(schedule_params)
     if @schedule.save
-      redirect_to root_path
+      redirect_to schedule_path(@schedule.id)
     else
       render :new
     end
