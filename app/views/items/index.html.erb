@@ -1,0 +1,39 @@
+<%= render 'shared/header' %>
+
+<div class="item-lists">
+  <div class="box27">
+    <span class="box-title">Camera</span>
+    <% @items.each do |item| %>
+      <% if item.item_name.id <= 9 %>
+        <div class="item-list">
+          <%= link_to item.item_name.name, "#", class: "item-list-name" %>
+          <%= item.status.name %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="box27">
+    <span class="box-title">Audio</span>
+    <% @items.each do |item| %>
+      <% if (item.item_name.id >= 10) && (item.item_name.id <= 15) %>
+        <div class="item-list">
+          <%= link_to item.item_name.name, "#", class: "item-list-name" %>
+          <%= item.status.name %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="box27">
+    <span class="box-title">Light</span>
+    <% @items.each do |item| %>
+      <% if item.item_name.id >= 16 %>
+        <div class="item-list">
+          <%= link_to item.item_name.name, "#", class: "item-list-name" %>
+          <%= item.status.name %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

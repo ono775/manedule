@@ -1,0 +1,63 @@
+.item-lists {
+  // itemエリア全体
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.box27 {
+  // 機材ごとのブロック
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: double 3px #c7c9c9;
+}
+
+.box27 .box-title {
+  // 機材ブロックの名前
+  position: absolute;
+  display: inline-block;
+  top: -27px;
+  left: -3px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 17px;
+  background: #949797;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+}
+
+.item-list {
+  // 機材ごとの付箋
+  color: #404040;
+  border-left: solid 6px #1fa67a;/*左側の線*/
+  border-bottom: solid 2px #dadada;/*下に灰色線*/
+  background: whitesmoke;
+  margin-bottom: 5px;/*下のバーとの余白*/
+  line-height: 1.5;
+  padding: 0.5em;
+  list-style-type: none!important;/*ポチ消す*/
+  font-weight: bold;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-list:hover {
+  // 付箋の効果
+  transform: scale(1.3, 1.3);
+}
+
+.item-list-name {
+  // 機材の名前の部分
+  color: rgb(9, 10, 9);
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.item-list-name:hover {
+  // 機材名の効果
+  color: #1fa67a;
+  text-decoration: none;
+}

@@ -37,7 +37,7 @@
 
 ### Association
 - has_many :schedules
-- has_many :objects
+- has_many :items
 
 ## schedulesテーブル
 | Column        | Type       | Options                         |
@@ -50,10 +50,10 @@
 
 ### Association
 - belongs_to :user
-- has_many :objects
+- has_many :items
 - has_many :members
 
-## objectsテーブル
+## itemsテーブル
 | Column    | Type       | Options                        |
 | --------- | ---------- | ------------------------------ |
 | name_id   | integer    | null: false                    |
