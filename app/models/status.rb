@@ -1,4 +1,4 @@
-class ItemName < ActiveHash::Base
+class Status < ActiveHash::Base
   self.data = [
     {id: 0, name: '---'},
     {id: 1, name: '問題なし'},
@@ -7,3 +7,4 @@ class ItemName < ActiveHash::Base
     {id: 4, name: '廃棄予定'},
     {id: 5, name: '廃棄済み'}
   ]
+end
