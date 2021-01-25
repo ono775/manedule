@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :schedules
-  has_many :objects
+  has_many :items
 
   with_options presence: true do
     validates :name
