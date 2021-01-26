@@ -1,12 +1,14 @@
 <%= render 'shared/header' %>
 
+<span class="kizairisuto">機材リスト</span>
+
 <div class="item-lists">
   <div class="box27">
     <span class="box-title">Camera</span>
     <% @items.each do |item| %>
       <% if item.item_name.id <= 9 %>
         <div class="item-list">
-          <%= link_to item.item_name.name, "#", class: "item-list-name" %>
+          <%= link_to item.item_name.name, item_path(item.id), class: "item-list-name" %>
           <%= item.status.name %>
         </div>
       <% end %>
@@ -18,7 +20,7 @@
     <% @items.each do |item| %>
       <% if (item.item_name.id >= 10) && (item.item_name.id <= 15) %>
         <div class="item-list">
-          <%= link_to item.item_name.name, "#", class: "item-list-name" %>
+          <%= link_to item.item_name.name, item_path(item.id), class: "item-list-name" %>
           <%= item.status.name %>
         </div>
       <% end %>
@@ -30,7 +32,7 @@
     <% @items.each do |item| %>
       <% if item.item_name.id >= 16 %>
         <div class="item-list">
-          <%= link_to item.item_name.name, "#", class: "item-list-name" %>
+          <%= link_to item.item_name.name, item_path(item.id), class: "item-list-name" %>
           <%= item.status.name %>
         </div>
       <% end %>

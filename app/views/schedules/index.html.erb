@@ -1,5 +1,7 @@
 <%= render 'shared/header' %>
 
+<span class="kizairisuto">月間スケジュール</span>
+
 <%= month_calendar(attribute: :start_date, end_attribute: :end_date, events: @schedules) do |date, schedules| %>
   <%= date.day %>
 
