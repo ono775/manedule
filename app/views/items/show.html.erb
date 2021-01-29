@@ -1,0 +1,18 @@
+<%= render 'shared/header' %>
+
+<span class="kizairisuto">機材持出スケジュール</span>
+<span class="item-name">
+  <%= @item.item_name.name %>
+</span>
+
+<%= month_calendar(attribute: :start_date, end_attribute: :end_date, events: @schedules) do |date, schedules| %>
+  <%= date.day %>
+
+  <% schedules.each do |schedule| %>
+    <% if schedule.item_ids.include?(@item.id) %>
+      <div class="item-schedules-list">
+        <%= link_to schedule.title, schedule_path(schedule.id), class: "item-schedule-title" %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
