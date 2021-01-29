@@ -1,7 +1,14 @@
+.kizairisuto {
+  margin-left: 50px;
+  font-size: 30px;
+  background: linear-gradient(transparent 70%, #d2d6d6 70%);
+}
+
 .item-lists {
   // itemエリア全体
   display: flex;
   justify-content: space-evenly;
+  margin-top: 40px;
 }
 
 .box27 {
