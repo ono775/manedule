@@ -41,7 +41,7 @@ class SchedulesController < ApplicationController
   private
 
   def schedule_params
-    params.require(:schedule).permit(:start_date, :end_date, :client, :title, :content).merge(user_id: current_user.id)
+    params.require(:schedule).permit(:start_date, :end_date, :client, :title, :content, { item_ids: [] }).merge(user_id: current_user.id)
   end
 
   def set_schedule
