@@ -9,7 +9,13 @@
       <% if item.item_name.id <= 9 %>
         <div class="item-list">
           <%= link_to item.item_name.name, item_path(item.id), class: "item-list-name" %>
-          <%= item.status.name %>
+          <% if item.status.id == 3 %>
+            <div class="status-name">
+              <%= item.status.name %>
+            </div>
+          <% else %>
+            <%= item.status.name %>
+          <% end %>
         </div>
       <% end %>
     <% end %>
@@ -21,7 +27,13 @@
       <% if (item.item_name.id >= 10) && (item.item_name.id <= 15) %>
         <div class="item-list">
           <%= link_to item.item_name.name, item_path(item.id), class: "item-list-name" %>
-          <%= item.status.name %>
+          <% if item.status.id == 3 %>
+            <div class="status-name">
+              <%= item.status.name %>
+            </div>
+          <% else %>
+            <%= item.status.name %>
+          <% end %>
         </div>
       <% end %>
     <% end %>
@@ -33,7 +45,14 @@
       <% if item.item_name.id >= 16 %>
         <div class="item-list">
           <%= link_to item.item_name.name, item_path(item.id), class: "item-list-name" %>
-          <%= item.status.name %>
+          <% if item.status.id == 3 %>
+            <div class="status-name">
+              <%= item.status.name %>
+            </div>
+          <% else %>
+            <%= item.status.name %>
+          <% end %>
+
         </div>
       <% end %>
     <% end %>
