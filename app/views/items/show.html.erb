@@ -11,7 +11,7 @@
   <% schedules.each do |schedule| %>
     <% if schedule.item_ids.include?(@item.id) %>
       <div class="item-schedules-list">
-        <%= link_to schedule.title, schedule_path(schedule.id), class: "item-schedule-title" %>
+        <%= link_to schedule.title, schedule_path(@item.schedule_ids), class: "item-schedule-title" %>
       </div>
     <% end %>
   <% end %>
