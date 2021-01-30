@@ -20,7 +20,7 @@
       </td>
     </tr>
     <tr>
-      <th class="th-size">title</th>
+      <th class="th-size">番組名</th>
       <td class="td-size">
         <%= @schedule.title %>
       </td>
@@ -30,6 +30,16 @@
       <td class="td-size-content">
         <%= @schedule.content %>
       </td>
+    </tr>
+    <tr>
+      <th class="th-size">使用機材</th>
+      <% if @schedule.item_ids %>
+        <td class="td-size">
+          <% @schedule.items.each do |i| %>
+            <%= link_to i.item_name.name, item_path(i), class: "item-show-link" %>
+          <% end %>
+        </td>
+      <% end %>
     </tr>
   </tbody>
 </table>
