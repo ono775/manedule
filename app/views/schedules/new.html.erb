@@ -34,7 +34,7 @@
 
       <div class="field">
         <%= f.label :items %><br/>
-        <%= f.collection_check_boxes(:item_ids, Item.all.order(:item_name_id), :id, :item_name) do |b| %>
+        <%= f.collection_check_boxes(:item_ids, Item.where(status_id: [1..2]), :id, :item_name) do |b| %>
           <div class="check-box">
             <%= b.label { b.check_box } + b.text[:name] %>
           </div>
