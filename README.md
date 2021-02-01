@@ -14,9 +14,29 @@
 
 # DEMO
 ### トップページ
-![トップページ]()
+![](./top_page.png)
+
 ### スケジュール詳細ページ
-![スケジュール詳細ページ]()
+![](./schedule_show.png)
+
+### 機材一覧ページ
+![](./item_index.png)
+
+### 機材詳細ページ
+![](./item_show.png)
+
+### 新規スケジュール作成ページ
+![](./schedule_new_1.png)
+![](./schedule_new_2.png)
+
+### 新規ユーザー登録
+![](./user_signup.png)
+
+### ログイン
+![](./user_login.png)
+
+### ユーザー管理ページ
+![](./user_edit.png)
 
 # 実装予定の内容
 - ### ユーザー管理機能  
