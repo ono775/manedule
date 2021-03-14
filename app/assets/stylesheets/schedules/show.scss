@@ -26,11 +26,27 @@ th, td {
   // 右側の各ブロック
   width: 600px;
   height: 70px;
+  white-space: wrap;
 }
 
 .td-size-content {
   // 内容部分のみのブロック
   white-space: pre-line;
+}
+
+.item-show-link {
+  background: whitesmoke;
+  border-left: solid 3px #1fa67a;
+  border-bottom: solid 2px #dadada;
+  border-right: solid 2px #dadada;
+  color: #404040;
+  padding: 2px;
+  margin-right: 10px;
+}
+
+.item-show-link:hover {
+  text-decoration: none;
+  color: #1fa67a;
 }
 
 .edit-link-area {

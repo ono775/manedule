@@ -3,7 +3,7 @@
 
 # 概要
 - 撮影技術会社のスケジュール管理と、機材の在庫管理を行うことが出来ます
-- スケジュールの新規作成や編集は基本的に１名のログインユーザーのみで、その他の人は閲覧のみ出来ます
+- スケジュールの新規作成や編集はログインユーザーのみで、その他の人は閲覧のみ出来ます
 
 # 制作背景(意図)
 現職はテレビなどの撮影技術を行っています。  
@@ -13,6 +13,30 @@
 アナログである、現場に出ていると確認出来ない、確認したい時に会社に人がいないなどを解決し、いつでも確認できるアプリケーションがあるとミスも減るのでは無いかと思い作成しようと思いました。
 
 # DEMO
+### トップページ
+![](./top_page.png)
+
+### スケジュール詳細ページ
+![](./schedule_show.png)
+
+### 機材一覧ページ
+![](./item_index.png)
+
+### 機材詳細ページ
+![](./item_show.png)
+
+### 新規スケジュール作成ページ
+![](./schedule_new_1.png)
+![](./schedule_new_2.png)
+
+### 新規ユーザー登録
+![](./user_signup.png)
+
+### ログイン
+![](./user_login.png)
+
+### ユーザー管理ページ
+![](./user_edit.png)
 
 # 実装予定の内容
 - ### ユーザー管理機能  
@@ -40,9 +64,10 @@
 - has_many :items
 
 ## schedulesテーブル
-| Column        | Type       | Options                         |
-| ------------  | ---------- | ------------------------------ |
-| location_date | date       | null: false                    |
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| start_date    | date       | null: false                    |
+| end_date      | date       | null: false                    |
 | client        | string     | null: false                    |
 | title         | string     | null: false                    |
 | content       | text       | null: false                    |
@@ -50,20 +75,32 @@
 
 ### Association
 - belongs_to :user
-- has_many :items
+- has_many :schedule_items
+- has_many :items, through: :schedule_items
 - has_many :members
 
 ## itemsテーブル
-| Column    | Type       | Options                        |
-| --------- | ---------- | ------------------------------ |
-| name_id   | integer    | null: false                    |
-| status_id | integer    | null: false                    |
-| user      | references | null: false, foreign_key: true |
-| schedule  | references | null: false, foreign_key: true |
+| Column       | Type       | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| item_name_id | integer    | null: false, uniqueness: true  |
+| status_id    | integer    | null: false                    |
+| user         | references | null: false, foreign_key: true |
+| schedule     | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
+- has_many :schedule_items
+- belongs_to :schedule, through: :schedule_items
+
+## schedule_itemsテーブル
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| schedule_id | integer    |                                |
+| ite_id      | integer    |                                |
+
+### Association
 - belongs_to :schedule
+- belongs_to :item
 
 ## membersテーブル
 | Column      | Type       | Options                        |

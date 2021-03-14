@@ -16,6 +16,11 @@ class ItemsController < ApplicationController
     end
   end
 
+  def show
+    @item = Item.find(params[:id])
+    @schedules = Schedule.all
+  end
+
   private
 
   def item_params
