@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit]
+  before_action :set_items, only: [:show, :edit, :update]
 
   def index
     @items = Item.all.order(:item_name_id)
@@ -19,12 +20,18 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
     @schedules = Schedule.all
   end
 
   def edit
-    @item = Item.find(params[:id])
+  end
+
+  def update
+    if @item.update(item_params)
+      redirect_to items_path
+    else
+      render :edit
+    end
   end
 
   private
