@@ -10,5 +10,19 @@ class Schedule < ApplicationRecord
     validates :client
     validates :title
     validates :content
+    validates :items
   end
+
+  # validate :uniqueness_of_same_day
+
+  # def uniqueness_of_same_day
+  #   # start_date = @schedule.start_date
+  #   # end_date = @schedule.end_date
+  #   if Schedule.joins(:schedule_items).exists?()
+  #     errors.add(:start_date, "同じ日に使用できません")
+  #     false
+  #   else
+  #     true
+  #   end
+  # end
 end
