@@ -4,6 +4,9 @@
 <span class="item-name">
   <%= @item.item_name.name %>
 </span>
+<% if user_signed_in? %>
+  <%= link_to "編集", edit_item_path, class: "item-edit-tag" %>
+<% end %>
 
 <%= month_calendar(attribute: :start_date, end_attribute: :end_date, events: @schedules) do |date, schedules| %>
   <%= date.day %>

@@ -5,6 +5,26 @@
   background: linear-gradient(transparent 70%, #b7f5e0 70%);
 }
 
+.item-edit-tag {
+  // 機材編集ページへのリンクボタン
+  margin-left: 10px;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #00BCD4;
+  background: #ECECEC;
+  transition: .2s;
+}
+
+.item-edit-tag:hover {
+  // 機材編集ページリンクの効果
+  background: #00bcd4;
+  color: white;
+  text-decoration: none;
+}
+
 .item-schedules-list {
   // 付箋
   color: #130f0b;
