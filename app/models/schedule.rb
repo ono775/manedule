@@ -1,6 +1,6 @@
 class Schedule < ApplicationRecord
   belongs_to :user
-  has_many :schedule_items
+  has_many :schedule_items, dependent: :destroy
   has_many :items, through: :schedule_items
   has_many :members
 
