@@ -32,6 +32,15 @@
         <%= f.text_area :content %>
       </div>
 
+      <div class="field">
+        <%= f.label :items %><br/>
+        <%= f.collection_check_boxes(:item_ids, Item.where(status_id: [1..2]), :id, :item_name) do |b| %>
+          <div class="check-box">
+            <%= b.label { b.check_box } + b.text[:name] %>
+          </div>
+        <% end %>
+      </div>
+
       <div class="action">
         <%= f.submit "更新", class: "btn-1" %>
       </div>
