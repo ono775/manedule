@@ -24,10 +24,8 @@ ActiveRecord::Schema.define(version: 2021_03_17_105657) do
   create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "name_id", null: false
     t.integer "position_id", null: false
-    t.bigint "schedule_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["schedule_id"], name: "index_members_on_schedule_id"
   end
 
   create_table "schedule_items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -63,6 +61,5 @@ ActiveRecord::Schema.define(version: 2021_03_17_105657) do
   end
 
   add_foreign_key "items", "users"
-  add_foreign_key "members", "schedules"
   add_foreign_key "schedules", "users"
 end
