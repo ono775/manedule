@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit]
-  before_action :set_members, only: [:show, :edit]
+  before_action :set_members, only: [:show, :edit, :update]
 
   def index
     @members = Member.all.order(:name_id)
@@ -24,6 +24,14 @@ class MembersController < ApplicationController
   end
 
   def edit
+  end
+
+  def update
+    if @member.update(member_params)
+      redirect_to members_path
+    else
+      render :edit
+    end
   end
 
   private
