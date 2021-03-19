@@ -15,9 +15,13 @@ ja:
         title: '番組名'
         content: '内容'
         items: '使用機材'
+        members: 'スタッフ'
       item:
         item_name: '機材名'
         status: '機材の状態'
+      member:
+        name: '名前'
+        position: '担当'
   devise:
     confirmations:
       confirmed: 'アカウントを登録しました。'
