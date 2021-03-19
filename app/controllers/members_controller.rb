@@ -2,6 +2,7 @@ class MembersController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
+    @members = Member.all.order(:name_id)
   end
   
   def new
