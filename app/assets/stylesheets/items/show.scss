@@ -55,3 +55,33 @@
   color: #1fa67a;
   text-decoration: none;
 }
+
+
+// スタッフ詳細ページ //
+
+.member-name {
+  // スタッフ名の見出し
+  margin-left: 50px;
+  font-size: 30px;
+  background: linear-gradient(transparent 70%, #b3dfff 70%);
+}
+
+.member-edit-tag {
+  // スタッフ編集ページへのリンクボタン
+  margin-left: 10px;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #6cc2ff;
+  background: #ECECEC;
+  transition: .2s;
+}
+
+.member-edit-tag:hover {
+  // スタッフ編集ページリンクの効果
+  background: #6cc2ff;
+  color: white;
+  text-decoration: none;
+}

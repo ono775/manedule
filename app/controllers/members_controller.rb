@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
-  before_action :set_members, only: [:show]
+  before_action :authenticate_user!, only: [:new, :create, :edit]
+  before_action :set_members, only: [:show, :edit]
 
   def index
     @members = Member.all.order(:name_id)
@@ -21,6 +21,9 @@ class MembersController < ApplicationController
 
   def show
     @schedules = Schedule.all
+  end
+
+  def edit
   end
 
   private

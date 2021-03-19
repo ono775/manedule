@@ -1,11 +1,11 @@
 <%= render 'shared/header' %>
 
 <span class="kizairisuto">スタッフスケジュール</span>
-<span class="item-name">
+<span class="member-name">
   <%= @member.name.name %>
 </span>
 <% if user_signed_in? %>
-  <%= link_to "編集", edit_member_path, class: "item-edit-tag" %>
+  <%= link_to "編集", edit_member_path, class: "member-edit-tag" %>
 <% end %>
 
 <%= month_calendar(attribute: :start_date, end_attribute: :end_date, events: @schedules) do |date, schedules| %>
