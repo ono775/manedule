@@ -1,0 +1,30 @@
+<div class="wrap">
+  <div class="h1">
+    <h1>スタッフ登録</h1>
+  </div>
+
+  <div class="form-wrap">
+    <%= form_with model: @member, local: true do |f| %>
+      <%= render 'shared/error_messages', model: f.object %>
+
+      <div class="field">
+        <%= f.label :name %><br/>
+        <%= f.collection_select(:name_id, Name.all, :id, :name, {}, {class:"select-box", id:"item-name"}) %>
+      </div>
+
+      <div class="field">
+        <%= f.label :position %><br/>
+        <%= f.collection_select(:position_id, Position.all, :id, :name, {}, {class:"select-box", id:"item-status"}) %>
+      </div>
+
+      <div class="action">
+        <%= f.submit "登録", class: "btn-1" %>
+      </div>
+
+    <% end %>
+  </div>
+
+  <div class="links">
+    <%= link_to "Back", items_path, class: "btn-2" %>
+  </div>
+</div>

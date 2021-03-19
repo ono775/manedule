@@ -73,3 +73,39 @@
   // ステータスの色分け
   color: red;
 }
+
+// スタッフ一覧 //
+
+.member-list {
+  // スタッフごとの付箋
+  color: #404040;
+  border-left: solid 6px #2c98e0;/*左側の線*/
+  border-bottom: solid 2px #dadada;/*下に灰色線*/
+  background: whitesmoke;
+  margin-bottom: 5px;/*下のバーとの余白*/
+  line-height: 1.5;
+  padding: 0.5em;
+  list-style-type: none!important;/*ポチ消す*/
+  font-weight: bold;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: space-between;
+}
+
+.member-list:hover {
+  // スタッフ付箋の効果
+  transform: scale(1.3, 1.3);
+}
+
+.member-list-name {
+  // スタッフの名前の部分
+  color: rgb(9, 10, 9);
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.member-list-name:hover {
+  // スタッフ名の効果
+  color: #2c98e0;
+  text-decoration: none;
+}

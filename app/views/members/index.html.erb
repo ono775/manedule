@@ -1,0 +1,38 @@
+<%= render 'shared/header' %>
+
+<span class="kizairisuto">スタッフlist</span>
+
+<div class="item-lists">
+  <div class="box27">
+    <span class="box-title">撮影</span>
+    <% @members.each do |member| %>
+      <% if member.position.id == 1 %>
+        <div class="member-list">
+          <%= link_to member.name.name, member_path(member.id), class: "member-list-name" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="box27">
+    <span class="box-title">音声</span>
+    <% @members.each do |member| %>
+      <% if member.position.id == 2 %>
+        <div class="member-list">
+          <%= link_to member.name.name, member_path(member.id), class: "member-list-name" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="box27">
+    <span class="box-title">アシスタント</span>
+    <% @members.each do |member| %>
+      <% if member.position.id == 3 %>
+        <div class="member-list">
+          <%= link_to member.name.name, member_path(member.id), class: "member-list-name" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
