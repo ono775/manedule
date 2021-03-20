@@ -45,7 +45,7 @@
         <%= f.label :members %><br/>
         <%= f.collection_check_boxes(:member_ids, Member.all, :id, :name) do |b| %>
           <div class="check-box">
-            <%= b.label { b.check_box } + b.text[:name] + b.text[:name] %>
+            <%= b.label { b.check_box } + b.text[:name] %>
           </div>
         <% end %>
       </div>

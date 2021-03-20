@@ -41,6 +41,16 @@
         </td>
       <% end %>
     </tr>
+    <tr>
+      <th class="th-size">スタッフ</th>
+      <% if @schedule.member_ids %>
+        <td class="td-size">
+          <% @schedule.members.each do |i| %>
+            <%= link_to i.name.name, member_path(i), class: "member-show-link" %>
+          <% end %>
+        </td>
+      <% end %>
+    </tr>
   </tbody>
 </table>
 
