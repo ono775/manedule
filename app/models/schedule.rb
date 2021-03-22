@@ -2,7 +2,8 @@ class Schedule < ApplicationRecord
   belongs_to :user
   has_many :schedule_items, dependent: :destroy
   has_many :items, through: :schedule_items
-  has_many :members
+  has_many :schedule_members, dependent: :destroy
+  has_many :members, through: :schedule_members
 
   with_options presence: true do
     validates :start_date

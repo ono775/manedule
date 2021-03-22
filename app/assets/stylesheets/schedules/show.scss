@@ -35,6 +35,7 @@ th, td {
 }
 
 .item-show-link {
+  // 機材タグ
   background: whitesmoke;
   border-left: solid 3px #1fa67a;
   border-bottom: solid 2px #dadada;
@@ -45,8 +46,26 @@ th, td {
 }
 
 .item-show-link:hover {
+  // 機材タグの効果
   text-decoration: none;
   color: #1fa67a;
+}
+
+.member-show-link {
+  // スタッフタグ
+  background: whitesmoke;
+  border-left: solid 3px #2c98e0;
+  border-bottom: solid 2px #dadada;
+  border-right: solid 2px #dadada;
+  color: #404040;
+  padding: 2px;
+  margin-right: 10px;
+}
+
+.member-show-link:hover {
+  // スタッフタグの効果
+  text-decoration: none;
+  color: #2c98e0;
 }
 
 .edit-link-area {
